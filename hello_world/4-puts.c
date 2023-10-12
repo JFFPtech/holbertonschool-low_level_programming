@@ -1,8 +1,7 @@
-#include <studio.h>
+#include <stdio.h>
+
+int main(void)
 {
-
-	init num = puts("Programming is like building a multilingual puzzle");
-	printf("\n%d", num);
-
+	put("Programming is like building a multilingual puzzle"):
 	return 0;
 }

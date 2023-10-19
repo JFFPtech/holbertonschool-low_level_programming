@@ -2,31 +2,26 @@
 
 /**
  * print_triangle - Prints a triangle, using the character #
- *@size: Size of the triangle
+ * @size: Size of the triangle
  * Return: Always 0
  */
 
 void print_triangle(int size)
 {
-	int hash, index;
+	int i, j, k;
 
-	if (size > 0)
+	if (size <= 0)
+		_putchar('\n');
+	for (i = 0; i < size; i++)
 	{
-		for (hash = 1; hash <= size; hash++)
+		for (j = size - 1; j > i; j--)
 		{
-			for (index = size - hash; index > 0; index--)
-			{
-				_putchar(' ');
-			}
-			for (index = 0; index < hash; index++)
-			{
-				_putchar('#');
-			}
-			if (hash == size)
-			{
-				continue;
-			}
-			_putchar('\n');
+			_putchar(' ');
 		}
+		for (k = 0; k <= i; k++)
+		{
+			_putchar('#');
+		}
+		_putchar('\n');
 	}
 }

@@ -1,20 +1,41 @@
 #include "3-calc.h"
+#include <stdlib.h>
+#include <stdio.h>
 
 /**
- * main - follows instructions of input operation
- * @argc: count of inputs
- * @argv: array of inputs
- *
- * Return: 0 success
+ * main - main function
+ * @argc: argument count
+ * @argv: string of arguments in array
+ * Return: 0
  */
 
-int main(int argc, char **argv)
+int main(int argc, char *argv[])
 {
-	if (argc == 4)
+	int a, b;
+	int (*o)(int, int);
+
+	if (argc != 4)
 	{
-		printf("%d\n", get_op_func(argv[2])(atoi(argv[1]), atoi(argv[3])));
-		return (0);
+		printf("Error\n");
+		exit(98);
 	}
-	printf("Error\n");
-	return (98);
+	if (argv[2][1] != '\0')
+	{
+		printf("Error\n");
+		exit(99);
+	}
+
+	o = get_op_func(argv[2]);
+	if (o == NULL)
+	{
+		printf("Error\n");
+		exit(99);
+	}
+
+	a = atoi(argv[1]);
+	b = atoi(argv[3]);
+
+	printf("%d\n", o(a, b));
+
+	return (0);
 }

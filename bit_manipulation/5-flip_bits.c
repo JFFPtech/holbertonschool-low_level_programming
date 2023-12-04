@@ -3,7 +3,7 @@
 /**
  * flip_bits - counts the number of bits needed to be flipped
  * @n: the number of bits
- * @m: the number to flip n 
+ * @m: the number to flip n
  *
  * Return: number of bits to flip to get from n to k
  */

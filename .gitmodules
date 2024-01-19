@@ -1,0 +1,3 @@
+[submodule "search_algorithms/search_algorithms/holbertonschool-low_level_programming"]
+	path = search_algorithms/search_algorithms/holbertonschool-low_level_programming
+	url = git@github.com:JFFPtech/holbertonschool-low_level_programming.git
